@@ -6,7 +6,7 @@
 /*   By: mschempe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 13:35:23 by mschempe          #+#    #+#             */
-/*   Updated: 2018/09/29 15:15:25 by mschempe         ###   ########.fr       */
+/*   Updated: 2018/09/29 16:30:14 by mschempe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,3 @@ t_input			*read_input(t_gen *eve)
 	return (head);
 }
 
-int		main(void)
-{
-	t_gen	balls;
-	balls.input = read_input(&balls);
-	return (0);
-}
