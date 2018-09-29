@@ -6,11 +6,11 @@
 #    By: mschempe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/29 11:49:48 by mschempe          #+#    #+#              #
-#    Updated: 2018/09/29 14:46:49 by rburger          ###   ########.fr        #
+#    Updated: 2018/09/29 14:58:46 by mschempe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = lem-in
+NAME = lem_in
 
 CC = gcc
 
@@ -20,7 +20,7 @@ SRC_DIR = ./src/
 
 INC_DIR = -I inc/
 
-SRCS =	main.c \
+SRCS =	read_input.c \
 
 SRC = $(addprefix $(SRC_DIR), $(SRCS))
 
