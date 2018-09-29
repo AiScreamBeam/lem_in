@@ -6,7 +6,7 @@
 /*   By: mschempe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 11:57:13 by mschempe          #+#    #+#             */
-/*   Updated: 2018/09/29 14:13:25 by mschempe         ###   ########.fr       */
+/*   Updated: 2018/09/29 14:17:20 by mschempe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,6 @@
 # define LEMIN_H
 
 # include "../libft/libft.h"
-
-typedef struct	s_gen
-{
-	int			nr_ant;
-	char		*strt_r;
-	char		*end_r;
-	char		*gnl;
-	t_input		input;
-	t_ant		ants;
-	t_link		links;
-	t_room		room;
-}				t_gen;
 
 typedef struct		s_input
 {
@@ -55,5 +43,17 @@ typedef struct		s_room
 	int				ava;
 	struct s_room	*next;
 }					t_room;
+
+typedef struct	s_gen
+{
+	int			nr_ant;
+	char		*strt_r;
+	char		*end_r;
+	char		*gnl;
+	t_input		input;
+	t_ant		ants;
+	t_link		links;
+	t_room		room;
+}				t_gen;
 
 #endif
