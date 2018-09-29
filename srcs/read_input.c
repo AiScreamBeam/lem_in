@@ -6,11 +6,17 @@
 /*   By: mschempe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 13:35:23 by mschempe          #+#    #+#             */
-/*   Updated: 2018/09/29 14:17:27 by rburger          ###   ########.fr       */
+/*   Updated: 2018/09/29 15:36:52 by rburger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/lemin"
+#include "../includes/lemin.h"
+
+void		error()
+{
+	ft_putendl("Oops, you did something wrong!");
+	exit(1);
+}
 
 t_input			*read_input(t_gen *eve)
 {
@@ -18,7 +24,7 @@ t_input			*read_input(t_gen *eve)
 	t_input		*node;
 
 	head = NULL; // have to initialise list to NULL first time we use it because reasons.
-	while (get_next_line((0, &eve->gnl))) // running gnl fn, assigning info via var eve to gnl inside struct t_gen
+	while (get_next_line(0, &eve->gnl)) // running gnl fn, assigning info via var eve to gnl inside struct t_gen
 	{
 		if (head == NULL)
 		{
@@ -38,5 +44,5 @@ t_input			*read_input(t_gen *eve)
 		node = node->next;
 	}
 	node->next = NULL; // making the  next instance of node of the same type so that we can have several of them
-	return (init);
+	return (head);
 }

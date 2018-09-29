@@ -6,7 +6,7 @@
 #    By: mschempe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/29 11:49:48 by mschempe          #+#    #+#              #
-#    Updated: 2018/09/29 14:46:49 by rburger          ###   ########.fr        #
+#    Updated: 2018/09/29 15:34:34 by rburger          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,12 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-SRC_DIR = ./src/
+SRC_DIR = ./srcs/
 
-INC_DIR = -I inc/
+INC_DIR = -I ./includes/
 
 SRCS =	main.c \
+		read_input.c
 
 SRC = $(addprefix $(SRC_DIR), $(SRCS))
 
