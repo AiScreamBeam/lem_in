@@ -6,7 +6,7 @@
 /*   By: mschempe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 11:57:13 by mschempe          #+#    #+#             */
-/*   Updated: 2018/09/29 14:24:13 by mschempe         ###   ########.fr       */
+/*   Updated: 2018/09/29 14:47:00 by rburger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,10 @@ typedef struct	s_gen
 	char		*strt_r;
 	char		*end_r;
 	char		*gnl;
-	t_input		input;
-	t_ant		ants;
-	t_link		links;
-	t_room		room;
+	t_input		*input;
+	t_ant		*ants;
+	t_link		*links;
+	t_room		*room;
 }				t_gen;
 
 #endif
