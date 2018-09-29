@@ -16,11 +16,13 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-SRC_DIR = ./src/
+SRC_DIR = ./srcs/
 
-INC_DIR = -I inc/
+INC_DIR = -I ./includes/
 
-SRCS =	read_input.c \
+SRCS =	main.c \
+		read_input.c \
+		find_info.c
 
 SRC = $(addprefix $(SRC_DIR), $(SRCS))
 
