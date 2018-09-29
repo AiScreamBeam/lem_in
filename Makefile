@@ -6,7 +6,7 @@
 #    By: mschempe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/29 11:49:48 by mschempe          #+#    #+#              #
-#    Updated: 2018/09/29 15:34:34 by rburger          ###   ########.fr        #
+#    Updated: 2018/09/29 15:54:37 by rburger          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRC_DIR = ./srcs/
 INC_DIR = -I ./includes/
 
 SRCS =	main.c \
-		read_input.c
+		read_input.c \
+		find_info.c
 
 SRC = $(addprefix $(SRC_DIR), $(SRCS))
 

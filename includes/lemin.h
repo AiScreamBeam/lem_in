@@ -6,7 +6,7 @@
 /*   By: mschempe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 11:57:13 by mschempe          #+#    #+#             */
-/*   Updated: 2018/09/29 15:36:54 by rburger          ###   ########.fr       */
+/*   Updated: 2018/09/29 16:15:01 by rburger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,12 @@ typedef struct		s_room
 	struct s_room	*next;
 }					t_room;
 
+typedef struct		s_path
+{
+	char			**arr;
+	struct s_path	*next;
+}					t_path;
+
 typedef struct	s_gen
 {
 	int			nr_ant;
@@ -54,9 +60,11 @@ typedef struct	s_gen
 	t_ant		*ants;
 	t_link		*links;
 	t_room		*room;
+	t_path		*path;
 }				t_gen;
 
 t_input		*read_input(t_gen *eve);
 void		error();
+void		find_info(t_gen *all);
 
 #endif

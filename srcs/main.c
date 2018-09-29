@@ -10,6 +10,8 @@ int main(void)
 	t_gen	all;
 	
 	all.input = read_input(&all);
+	find_info(&all);
+
 	return (0);
 	
 }
