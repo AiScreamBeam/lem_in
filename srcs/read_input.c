@@ -6,11 +6,12 @@
 /*   By: mschempe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 13:35:23 by mschempe          #+#    #+#             */
-/*   Updated: 2018/09/29 16:00:36 by rburger          ###   ########.fr       */
+/*   Updated: 2018/09/29 14:48:04 by mschempe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lemin.h"
+#include <stdio.h>
 
 void		error()
 {
@@ -34,10 +35,12 @@ t_input			*read_input(t_gen *eve)
 		node->str = eve->gnl; // putting value node into value str from struct t_input and making it be equal to
 							  // the parameter of this function (eve) and putting that value in gnl from struct t_gen
 		//**TESTING**
+
 /*
 		ft_putstr("all->gnl: "); // ask 
+		ft_putstr("all->gnl: "); // what are we asking the function to do (ask computer what am I telling it to do?) 
 		ft_putendl(eve->gnl);
-		ft_putstr("node->str: ");
+		ft_putstr("node->str: "); // ask computer: " "
 		ft_putendl(node->str); 
 */
 		node->next = (t_input *)ft_memalloc(sizeof(t_input));
