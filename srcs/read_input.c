@@ -6,7 +6,7 @@
 /*   By: mschempe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 13:35:23 by mschempe          #+#    #+#             */
-/*   Updated: 2018/09/29 14:48:04 by mschempe         ###   ########.fr       */
+/*   Updated: 2018/09/29 15:15:25 by mschempe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,17 @@ t_input			*read_input(t_gen *eve)
 		ft_putendl(node->str); 
 */
 		node->next = (t_input *)ft_memalloc(sizeof(t_input));
-		if (node->str == NULL || (ft_strcmp(node->str, "/0") == 0))
-			error();
+		//if (node->str == NULL || (ft_strcmp(node->str, "/0") == 0))
+		//	error();
 		node = node->next;
 	}
 	node->next = NULL; // making the  next instance of node of the same type so that we can have several of them
 	return (head);
+}
+
+int		main(void)
+{
+	t_gen	balls;
+	balls.input = read_input(&balls);
+	return (0);
 }
