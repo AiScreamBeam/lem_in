@@ -17,12 +17,14 @@ void	save_end(t_gen *all, t_input *node)
 void	find_info(t_gen *all)
 {
 	int		sflag, eflag;
-	t_input *head;
-	t_input *node;
+	t_input		*node;
+	t_room		*rooms;
+	t_link		*links;
 
 	sflag = eflag = 1;
-	head = all->input;
 	node = all->input;
+	rooms = NULL;
+	links = NULL;
 
 	int test = ft_atoi(all->input->str);
 	if (test)
@@ -42,7 +44,7 @@ void	find_info(t_gen *all)
 			node = node->next;
 			ft_putendl(node->str);
 			save_start(all, node);
-			node = head;
+			node = all->input;
 			sflag = -1;
 		}
 		else if (ft_strcmp("##end", node->str) == 0 && eflag == 1)
@@ -50,12 +52,14 @@ void	find_info(t_gen *all)
 			node = node->next;
 			ft_putendl(node->str);
 			save_end(all, node);
-			node = head;
+			node = all->input;
 			eflag = -1;
 		}
-		//else if ()
+		else if (ft_strchr(node->str, ' ') != NULL)
+			rooms = save_rooms(all, node->str, rooms);
 
 		//ft_putendl(node->str);
 		node = node->next;
 	}
+	all->room = rooms;
 }
