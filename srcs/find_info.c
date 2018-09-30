@@ -19,11 +19,14 @@ void	find_info(t_gen *all)
 	int		sflag, eflag;
 	t_input *head;
 	t_input *node;
+	t_link *link_l;
 
 	sflag = eflag = 1;
 	head = all->input;
 	node = all->input;
+	link_l = NULL;
 
+	int links = 0;
 	int test = ft_atoi(all->input->str);
 	if (test)
 	{
@@ -53,7 +56,16 @@ void	find_info(t_gen *all)
 			node = head;
 			eflag = -1;
 		}
-		//else if ()
+		else if (strchr(node->str, '-'))
+		{
+			link_l->link = (char *)ft_memalloc(sizeof(char) * ft_strlen(node->str) + 1);
+			link_l->link = node->str;
+			link_l->nrlink = links;
+			links++;
+			ft_putstr("link_l->link: ");
+			ft_putendl(link_l->link);
+			link_l = link_l->next;
+		}
 
 		//ft_putendl(node->str);
 		node = node->next;
