@@ -6,12 +6,11 @@
 /*   By: mschempe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 13:35:23 by mschempe          #+#    #+#             */
-/*   Updated: 2018/09/29 16:30:14 by mschempe         ###   ########.fr       */
+/*   Updated: 2018/09/29 17:06:57 by rburger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/lemin.h"
-#include <stdio.h>
 
 void		error()
 {

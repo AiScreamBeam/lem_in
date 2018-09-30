@@ -43,7 +43,7 @@ typedef struct		s_room
 {
 	char			*rname;
 	int				vis;
-	int				ava;
+	int				avail;
 	struct s_room	*next;
 }					t_room;
 
@@ -56,6 +56,7 @@ typedef struct		s_path
 typedef struct	s_gen
 {
 	int			nr_ant;
+	int			nr_rooms;
 	char		*strt_r;
 	char		*end_r;
 	char		*gnl;
@@ -69,5 +70,5 @@ typedef struct	s_gen
 t_input		*read_input(t_gen *eve);
 void		error();
 void		find_info(t_gen *all);
-
+t_room		*save_rooms(t_gen *all, char *str, t_room *node);
 #endif
