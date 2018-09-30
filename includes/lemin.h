@@ -6,7 +6,7 @@
 /*   By: mschempe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 11:57:13 by mschempe          #+#    #+#             */
-/*   Updated: 2018/09/29 18:28:08 by mschempe         ###   ########.fr       */
+/*   Updated: 2018/09/30 10:55:26 by rburger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,7 @@ t_input		*read_input(t_gen *eve);
 void		error();
 void		find_info(t_gen *all);
 t_room		*save_rooms(t_gen *all, char *str, t_room *node);
+t_link		*save_links(t_gen *all, char *str, t_link *node, int linknr);
+t_ant		*save_ants(t_gen *all, t_ant *node, int nr);
+
 #endif
