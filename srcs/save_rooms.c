@@ -32,6 +32,5 @@ t_room		*save_rooms(t_gen *all, char *str, t_room *node)
 	ft_putstr("this is node->rname: ");
 	ft_putendl(node->rname);
 
-
 	return (head);
 }
