@@ -25,6 +25,7 @@ SRCS =	main.c \
 		find_info.c \
 		save_rooms.c \
 		save_links.c \
+		save_ants.c \
 		path_algo.c
 
 SRC = $(addprefix $(SRC_DIR), $(SRCS))

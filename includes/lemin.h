@@ -73,6 +73,7 @@ t_input		*read_input(t_gen *eve);
 void		error();
 void		find_info(t_gen *all);
 t_room		*save_rooms(t_gen *all, char *str, t_room *node);
+t_ant		*save_ants(t_gen *all, t_ant *node, int nr);
 t_link		*save_link(t_gen *all, char *str, t_link *node, int nr);
 void		find_path(t_gen *all);
 char		*get_path(t_gen *all, char *pos);

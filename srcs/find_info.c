@@ -17,6 +17,9 @@ void	save_end(t_gen *all, t_input *node)
 void	find_info(t_gen *all)
 {
 	int		sflag, eflag;
+	int		links;
+	int		test;
+	t_ant	*ants;
 	t_input *head;
 	t_input *node;
 	t_link *link_l;
@@ -25,15 +28,20 @@ void	find_info(t_gen *all)
 
 	sflag = eflag = 1;
 	node = all->input;
-
 	link_l = NULL;
 	rooms = NULL;
+
+	ants = NULL;
 	links = 1;
-	int test = ft_atoi(all->input->str);
+	test = ft_atoi(all->input->str);
 	if (test)
 	{
 		all->nr_ant = test;
-//		all->ants = save_ants(all);
+		while (test > 0)
+		{
+			ants = save_ants(all, ants, test);
+			test--;
+		}
 		ft_putstr("this is all->nr_ant: ");
 		ft_putnbr(all->nr_ant);
 		ft_putchar('\n');
