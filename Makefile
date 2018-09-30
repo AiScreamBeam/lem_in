@@ -6,7 +6,7 @@
 #    By: mschempe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/09/29 11:49:48 by mschempe          #+#    #+#              #
-#    Updated: 2018/09/30 10:53:38 by rburger          ###   ########.fr        #
+#    Updated: 2018/09/30 14:06:12 by mschempe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRCS =	main.c \
 		find_info.c \
 		save_rooms.c \
 		save_links.c \
-		save_ants.c
+		save_ants.c \
+		path_algo.c
 
 SRC = $(addprefix $(SRC_DIR), $(SRCS))
 

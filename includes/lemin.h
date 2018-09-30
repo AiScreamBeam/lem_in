@@ -6,7 +6,7 @@
 /*   By: mschempe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/29 11:57:13 by mschempe          #+#    #+#             */
-/*   Updated: 2018/09/30 10:55:26 by rburger          ###   ########.fr       */
+/*   Updated: 2018/09/30 16:39:54 by mschempe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ typedef struct		s_link
 {
 	int				fnd_e;
 	int				vis;
-	char			*link;
+	char			**link;
 	int				nrlink;
 	struct s_link	*next;
 }					t_link;
@@ -57,21 +57,25 @@ typedef struct	s_gen
 {
 	int			nr_ant;
 	int			nr_rooms;
+	int			path_pos;
 	char		*strt_r;
 	char		*end_r;
 	char		*gnl;
+	char		**path;
 	t_input		*input;
 	t_ant		*ants;
-	t_link		*links;
+	t_link		*link;
 	t_room		*room;
-	t_path		*path;
+//	t_path		*path;
 }				t_gen;
 
 t_input		*read_input(t_gen *eve);
 void		error();
 void		find_info(t_gen *all);
 t_room		*save_rooms(t_gen *all, char *str, t_room *node);
-t_link		*save_links(t_gen *all, char *str, t_link *node, int linknr);
 t_ant		*save_ants(t_gen *all, t_ant *node, int nr);
+t_link		*save_link(t_gen *all, char *str, t_link *node, int nr);
+void		find_path(t_gen *all);
+char		*get_path(t_gen *all, char *pos);
 
 #endif

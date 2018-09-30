@@ -19,16 +19,18 @@ void	find_info(t_gen *all)
 	int		sflag, eflag;
 	int		links;
 	int		test;
-	t_input	*head;
-	t_input	*node;
-	t_link	*link_l;
-	t_room	*rooms;
 	t_ant	*ants;
+	t_input *head;
+	t_input *node;
+	t_link *link_l;
+	t_room	*rooms;
+	int		links;
 
 	sflag = eflag = 1;
 	node = all->input;
 	link_l = NULL;
 	rooms = NULL;
+
 	ants = NULL;
 	links = 1;
 	test = ft_atoi(all->input->str);
@@ -67,14 +69,14 @@ void	find_info(t_gen *all)
 		}
 		else if (ft_strchr(node->str, '-') != NULL)
 		{
-			link_l = save_links(all, node->str, link_l, links);
-			links++;
+			link_l = save_link(all, node->str, link_l, links);
+			links++; // l_link == name of function and keep returning name of the function
 		}
 		else if (ft_strchr(node->str, ' ') != NULL)
 			rooms = save_rooms(all, node->str, rooms);
+
 		node = node->next;
 	}
 	all->room = rooms;
-	all->links = link_l;
-	all->ants = ants;
+	all->link = link_l;
 }
