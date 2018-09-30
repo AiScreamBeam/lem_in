@@ -28,12 +28,12 @@ void	find_info(t_gen *all)
 
 	link_l = NULL;
 	rooms = NULL;
-	links = 0;
+	links = 1;
 	int test = ft_atoi(all->input->str);
 	if (test)
 	{
 		all->nr_ant = test;
-		all->ants = save_ants(all);
+//		all->ants = save_ants(all);
 		ft_putstr("this is all->nr_ant: ");
 		ft_putnbr(all->nr_ant);
 		ft_putchar('\n');
@@ -70,4 +70,5 @@ void	find_info(t_gen *all)
 		node = node->next;
 	}
 	all->room = rooms;
+	all->link = link_l;
 }
