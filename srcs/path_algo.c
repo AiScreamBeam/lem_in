@@ -6,7 +6,7 @@
 /*   By: mschempe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/30 13:16:44 by mschempe          #+#    #+#             */
-/*   Updated: 2018/09/30 16:39:57 by mschempe         ###   ########.fr       */
+/*   Updated: 2018/09/30 17:26:35 by rburger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,29 +86,36 @@ char	*get_path(t_gen *all, char *pos)
 		all->link->vis = 1;
 		return (all->path[all->path_pos]);
 	}
-/*
-	else if (ft_strcmp(all->end_r, all->path[all->path->pos]) == 0)
-	{
-		ft_putendl("this is in strcmp(end)");
-		return ("finished");
-	}
-*/
-//	return (all->path[all->path_pos]);
+	/*
+	   else if (ft_strcmp(all->end_r, all->path[all->path->pos]) == 0)
+	   {
+	   ft_putendl("this is in strcmp(end)");
+	   return ("finished");
+	   }
+	   */
+	//	return (all->path[all->path_pos]);
 	return(pos);
-//	error();
+	//	error();
 	//	return (-1);
 	// same with the return type here?
 }
 
-int		print_arr(char **arr)
+int		print_arr(t_gen *all)
 {
 	int i;
 
-	i = 0;
-	while (arr[i] != NULL)
+	while (all->ants->next)
 	{
-		ft_putendl(arr[i]);
-		i++;
+		i = 0;
+		while (all->path[i] != NULL)
+		{
+			//print ant name here
+			all->ants->aname;
+			ft_putchar('-');
+			ft_putendl(all->path[i]);
+			i++;
+		}
+		all->ants = all->ants->next;
 	}
 	return (0);
 }
@@ -131,14 +138,19 @@ void	find_path(t_gen *all)
 		}
 		all->link = all->link->next;
 	}
+	int ants = all->nr_ant;
 	ft_putendl("Printing path: ");
-	print_arr(all->path);
-/*
-	ft_putendl(all->path[0]);
-	ft_putendl(all->path[1]);
-	ft_putendl(all->path[2]);
-	ft_putendl(all->path[3]);
-	ft_putendl(all->path[4]);
-	ft_putendl(all->path[5]);
-	*/
+	//	while (ants > 0)
+	//	{
+	print_arr(all);
+	//		ants--;
+	//	}
+	/*
+	   ft_putendl(all->path[0]);
+	   ft_putendl(all->path[1]);
+	   ft_putendl(all->path[2]);
+	   ft_putendl(all->path[3]);
+	   ft_putendl(all->path[4]);
+	   ft_putendl(all->path[5]);
+	   */
 }

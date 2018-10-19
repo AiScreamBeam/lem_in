@@ -24,7 +24,6 @@ void	find_info(t_gen *all)
 	t_input *node;
 	t_link *link_l;
 	t_room	*rooms;
-	int		links;
 
 	sflag = eflag = 1;
 	node = all->input;
